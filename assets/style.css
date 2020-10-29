@@ -1,11 +1,12 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-color: #99a8b2;
   line-height: 1;
 }
 
 textarea{
-  background: transparent;
+  background: #f4f4f2;
   border: none;
   resize: none;
   color: #000000;
@@ -15,7 +16,7 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: #1f6f8b;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -27,6 +28,7 @@ textarea{
 
 .time-block{
   text-align: center;
+  font-weight: bold;
   border-radius: 15px;
 }
 
@@ -41,6 +43,7 @@ textarea{
   color: #000000;
   border-top: 1px dashed #000000;
 }
+
 
 .past {
   background-color: #d3d3d3;
