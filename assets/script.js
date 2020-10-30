@@ -8,13 +8,17 @@ var text3 = $("#3hr");
 var text4 = $("#4hr");
 var text5 = $("#5hr");
 
-var textHr9 = localStorage.getItem("hr-9");
-var textHr10 = localStorage.getItem("hr-10");
-var textHr11 = localStorage.getItem("hr-11");
-var textaHrl12 = localStorage.getItem("hr-12");
-var textHr1 = localStorage.getItem("hr-1");
-var textHr2 = localStorage.getItem("hr-2");
-var textHr3 = localStorage.getItem("hr-3");
-var textHr4 = localStorage.getItem("hr-4");
-var textHr5 = localStorage.getItem("hr-5");
+var textHr9 = localStorage.getItem("9hr");
+var textHr10 = localStorage.getItem("10hr");
+var textHr11 = localStorage.getItem("11hr");
+var textaHr12 = localStorage.getItem("12hr");
+var textHr1 = localStorage.getItem("1hr");
+var textHr2 = localStorage.getItem("2hr");
+var textHr3 = localStorage.getItem("3hr");
+var textHllr4 = localStorage.getItem("4hr");
+var textHr5 = localStorage.getItem("5hr");
+
+
+
+$("#currentDay").text(moment().format('dddd') + ", " + moment().format('LL'));
 
