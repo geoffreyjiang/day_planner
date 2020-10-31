@@ -10,8 +10,9 @@ $(document).ready(function () {
         const timeId = "#" + time
     
     if (currentHour > time) {
-        $("#input").addClass("bg-danger text-light")
+        $(timeId).addClass("bg-danger text-light")
         $(timeId).attr("disabled", true)
+        $(timeId).css("text-decoration", "line-through")
     } else if (currentHour === time) {
         $(timeId).addClass("bg-secondary text-light")
     } else {
