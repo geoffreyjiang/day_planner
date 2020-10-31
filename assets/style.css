@@ -5,7 +5,7 @@ body {
   line-height: 1;
 }
 
-textarea{
+input{
   background: #f4f4f2;
   border: none;
   resize: none;
@@ -58,6 +58,10 @@ textarea{
 .future {
   background-color: #77dd77;
   color: white;
+}
+
+.col-md-1 {
+  font-weight: bold;
 }
 
 .saveBtn {

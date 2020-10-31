@@ -1,24 +1,41 @@
-var text9 = $("#9hr");
-var text10 = $("#10hr");
-var text11 = $("#11hr");
-var text12 = $("#12hr");
-var text1 = $("#1hr");
-var text2 = $("#2hr");
-var text3 = $("#3hr");
-var text4 = $("#4hr");
-var text5 = $("#5hr");
+$(document).ready(function () {
+    const currentTime = moment().format('dddd') + " , " + moment().format('LL');
+    $("#currentDay").text(currentTime)
+    
+    const times = [9, 10, 11, 12, 1, 2, 3, 4, 5]
+    
+//     times.forEach(time => {
+//         const timeCheck = window.localStorage.getItem(time)
+//         const currentHour = moment().hour()
+//         const timeId = "#" + time
+    
+//     if (currentHour > time) {
+//         $("#input").addClass("bg-danger text-light")
+//         $(timeId).attr("disabled", true)
+//     } else if (currentHour === time) {
+//         $(timeId).addClass("bg-secondary text-light")
+//     } else {
+//         $(timeId).addClass("bg-success text-light")
+//     }
+    
+//         if (timeCheck === null) window.localStorage.setItem(time, "")
+//         if (timeCheck.length > 0) $(timeId).attr("value", window.localStorage.getItem(time))
+//     })
+// })
 
-var textHr9 = localStorage.getItem("9hr");
-var textHr10 = localStorage.getItem("10hr");
-var textHr11 = localStorage.getItem("11hr");
-var textaHr12 = localStorage.getItem("12hr");
-var textHr1 = localStorage.getItem("1hr");
-var textHr2 = localStorage.getItem("2hr");
-var textHr3 = localStorage.getItem("3hr");
-var textHllr4 = localStorage.getItem("4hr");
-var textHr5 = localStorage.getItem("5hr");
+$(".saveBtn").on("click", function (e) {
+    e.preventDefault()
+    const time = e.target.querySelector("input").getAttribute("id")
+    const text = e.target.querySelector("input").value
 
+    window.localStorage.setItem(time, text)
+})
+})
 
-
-$("#currentDay").text(moment().format('dddd') + ", " + moment().format('LL'));
-
+// $(".saveBtn").on("click", function(){
+//     userInput = $(this).siblings("textArea").val().trim();
+//     console.log(userInput);
+//     hourSpan = $(this).siblings("textArea").text().trim();
+//     console.log(hourSpan);
+//     localStorage.setItem(hourSpan, JSON.stringify(userInput));
+// })
