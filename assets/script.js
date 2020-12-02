@@ -19,10 +19,13 @@ $(document).ready(function () {
         $(timeId).addClass("bg-success text-light")
     }
     
-        if (timeCheck === null) window.localStorage.setItem(time, "")
-        if (timeCheck.length > 0) $(timeId).attr("value", window.localStorage.getItem(time))
+        if (timeCheck === null) {
+            window.localStorage.setItem(time, "")
+        }   else if (timeCheck.length > 0) {
+            $(timeId).attr("value", window.localStorage.getItem(time))
+        }
     })
-
+    
 $("form").on("submit", function (e) {
     e.preventDefault()
 
@@ -36,11 +39,3 @@ $("form").on("submit", function (e) {
 
 
 
-
-// $(".saveBtn").on("click", function(){
-//     userInput = $(this).siblings("textArea").val().trim();
-//     console.log(userInput);
-//     hourSpan = $(this).siblings("textArea").text().trim();
-//     console.log(hourSpan);
-//     localStorage.setItem(hourSpan, JSON.stringify(userInput));
-// })
